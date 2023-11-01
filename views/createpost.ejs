@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create a New Blog Post</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="create">
+    <h1>Create a New Blog Post</h1><br><br>
+    <form method="post" action="/create">
+        <label for="title">Title:</label><br>
+        <input type="text" id="title" name="title" required><br>
+
+        <label for="content">Content:</label><br>
+        <textarea id="content" name="content" rows="4" required></textarea><br>
+
+        <button type="submit" class="btn btn-outline-light">Create Post</button>
+    </form>
+    <a href="/">Back to Main Page</a>
+    </div>
+</body>
+</html>

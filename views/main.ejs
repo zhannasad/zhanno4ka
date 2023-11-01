@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Blog</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="left-column">
+            <h1>Welcome to My Blog</h1><br>
+            <h2>Create a New Blog Post:</h2><br>
+            <form method="get" action="/create">
+                <button type="submit" class="btn btn-outline-info">Create Post</button>
+            </form>
+        </div>
+        <div class="right-column">
+            <h1>Posts</h1><br>
+            <ul>
+                <% for (let post of blogPosts) { %>
+                    <li>
+                        <a href="/blog/<%= post.id %>"><%= post.title %></a> - <%= post.date %>
+                        <p><%= post.content.length > 100 ? post.content.slice(0, 100) + '...' : post.content %></p>
+                        <% if (post.content.length > 100) { %>
+                            <a href="/blog/<%= post.id %>" class="read-more">Read More</a>
+                        <% } %>
+                    </li>
+                <% } %>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
