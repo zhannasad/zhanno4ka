@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= blogPost.title %></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        
+        body {
+            background-color: #333;
+            color: aliceblue;
+            font-family: Arial, sans-serif; 
+        }
+        .container {
+            padding: 50px;
+        }
+        h1 {
+            font-size: 24px; 
+        }
+        p {
+            font-size: 16px; 
+        }
+        a {
+    color: #9be0f1; 
+}
+a:hover {
+    color: #e395c4; 
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1><%= blogPost.title %></h1>
+        <p><%= blogPost.content %></p>
+        <p>Published on <%= blogPost.date %></p>
+        <a href="/">Back to Main Page</a>
+    </div>
+</body>
+</html>
